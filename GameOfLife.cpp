@@ -7,11 +7,11 @@ void randomSeed();
 int Check(int row, int col);
 void fate(int row, int col);
 
-const int x = 32;
-const int y = 32;
+const int x = 40;
+const int y = 24;
 
 char grid[x][y];
-int newGrid[x][y];
+char newGrid[x][y];
 
 
 int main() {
@@ -21,7 +21,6 @@ int main() {
             newGrid[i][j] = ' ';
         }
     }
-
 
     randomSeed();
     while (true) {
@@ -68,12 +67,12 @@ int Check(int row, int col) {
         for (int j = -1; j <= 1; j++) {
             int xrow = (row + i + y) % y;
             int xcol = (col + j + x) % x;
-            if (grid[xrow][xcol] == 'x')
-                counter++;
+                if (grid[xrow][xcol] == 'x')
+                    counter++;
+            }
         }
-    }
-    if (grid[row][col] == 'x')
-        counter--;
+        if (grid[row][col] == 'x')
+            counter--;
     return counter;
 }
 
