@@ -7,7 +7,7 @@ void randomSeed();
 int Check(int row, int col);
 void fate(int row, int col);
 
-const int x = 40;
+const int x = 24;
 const int y = 24;
 
 char grid[x][y];
